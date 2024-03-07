@@ -1,7 +1,7 @@
 # Zsh configuration
 ## Command lines
 - Installing zsh  
-  ⚠️ **Accept the default configuration when it is proposed**
+  ⚠️ **Don't accept the default configuration when it is proposed, then import my configuration**
   ```
   sudo apt update && sudo apt install zsh
   ```
