@@ -10,6 +10,10 @@
   chsh -s $(which zsh)
   ```
 - Type `zsh` in the terminal to switch to the new shell
+- File modification .zshrc to copy the config [from file](zsh/.zshrc)
+  ```
+  vi ~/.zsrhc
+  ```
 - After modifying the configuration, save the file and reload it
   ```
   source ~/.zshrc
