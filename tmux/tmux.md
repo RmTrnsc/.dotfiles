@@ -6,17 +6,17 @@
   ```
 - Started a tmux session
     - Without _zsh_  
-    ```
-    tmux
-    ```
-     or
-  ```
-  tmux new-session
-  ```
-  or if you want to attach a session
-  ```
-  tmux new -s _sessionname_ && tmux a _sessionname_
-  ```
+      ```
+      tmux
+      ```
+      or
+      ```
+      tmux new-session
+      ```
+      or if you want to attach a session
+      ```
+      tmux new -s _sessionname_ && tmux a _sessionname_
+      ```
     - With _zsh_
       ```
       ts
@@ -64,6 +64,12 @@
     ```
     tksv
     ```
+
+### Other command lines
+- I can also use the [script](https://github.com/RmTrnsc/.dotfiles/blob/main/tmux/restore.sh) to recreate a session and call it up as follows
+  ```
+  sudo /usr/bin/start_of_the_day.sh
+  ```
 
 ### Ressources
 - [Tmux wiki](https://github.com/tmux/tmux/wiki)
