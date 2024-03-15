@@ -69,7 +69,7 @@
 - Instead of recreating everything by hand, I can add the resurrection [script](https://github.com/RmTrnsc/.dotfiles/blob/main/tmux/restore.sh) to the resurrect plugin config and run this command
   ⚠️ Be careful after downloading this [script](https://github.com/RmTrnsc/.dotfiles/blob/main/tmux/start_of_the_day.sh)
   ```
-  sudo /usr/bin/start_of_the_day.sh
+  /usr/bin/start_of_the_day.sh
   ```
 
 ### Ressources
