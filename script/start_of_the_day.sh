@@ -1,4 +1,6 @@
 #!/bin/bash
+# Type this command to create a symlink
+# sudo ln -s path/of/file /usr/local/bin/name_of_script
 
 EZIO_PATH="/mnt/d/web/ezio"
 AGENDA_PATH="/mnt/d/web/agenda"
@@ -10,38 +12,37 @@ AGENDA_MYSQL="/mnt/d/backup/planning/"$DATE
 launch_services(){
 	sudo service mysql start
 	sudo service apache2 start
-	sudo -k
 }
 
 launch_tmux() {
-	# Windows and panels are automatically selected when they are created
 	# create new session
 	tmux new-session		-d -s dev
 
 	# create windows
 	tmux rename-window		-t dev:1 assets
 
-	tmux new-window         -t dev:2
+	tmux new-window         	-t dev:2
 	tmux rename-window		-t dev:2 server
 	tmux split-window		-h -p 50
 	
-	tmux new-window         -t dev:3
+	tmux new-window         	-t dev:3
 	tmux rename-window		-t dev:3 git/composer/debug
 	tmux split-window		-h -p 50
 	
-	tmux new-window         -t dev:4
+	tmux new-window         	-t dev:4
 	tmux rename-window		-t dev:4 mysql
-	tmux split-window		-h -p 50
+	tmux split-window		-v -p 50
+ 	tmux select-pane		-t 1
 	tmux split-window		-h -p 50
 
-	tmux new-window         -t dev:5
+	tmux new-window         	-t dev:5
 	tmux rename-window		-t dev:5 zsh
 
 
 	# launch assets
 	tmux select-window		-t dev:assets
 
-    tmux send-keys          'cd '$EZIO_PATH C-m
+    	tmux send-keys          	'cd '$EZIO_PATH C-m
 	tmux send-keys			'php bin/console c:c' C-m
 	tmux send-keys			'php bin/console a:i' C-m
 	tmux send-keys			'php bin/console a:w' C-m
@@ -77,8 +78,6 @@ launch_tmux() {
 	tmux select-pane		-t 1
 	tmux send-keys			'cd '$EZIO_MYSQL C-m
 	tmux send-keys			'pv '$HOUR'h.sql | sudo mysql -u neoadmin -p -h localhost ezio' C-m
-	
-	sudo -k
 
 	tmux select-pane		-t 2
 	tmux send-keys			'cd '$AGENDA_MYSQL C-m
