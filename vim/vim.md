@@ -7,8 +7,6 @@
   ```
   mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged && touch ~/.vimrc
   ```
-- Copy all vim files [this file](https://github.com/RmTrnsc/.dotfiles/blob/main/vim/.vimrc) and in [this folder](https://github.com/RmTrnsc/.dotfiles/blob/main/vim/.vim) at the root
-
 - Launch this command
   ```
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -18,6 +16,7 @@
   ```
   vim ~/.vimrc
   ```
+- Copy [this content file](https://github.com/RmTrnsc/.dotfiles/blob/main/vim/.vimrc)
 - Install all plugin
   ```
   :PlugInstall
