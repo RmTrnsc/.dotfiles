@@ -3,8 +3,12 @@
   ```
   sudo apt update && sudo apt install vim
   ```
-- Imported all vim files and folder [this file](https://github.com/RmTrnsc/.dotfiles/blob/main/vim/vimrc) and [this folder](https://github.com/RmTrnsc/.dotfiles/blob/main/vim/vim) at the root  
-  ⚠️ Don't forget to rename the `vimrc` file to `.vimrc`.
+- Type this for create all folder and config file
+  ```
+  mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged && touch ~/.vimrc
+  ```
+- Copy all vim files [this file](https://github.com/RmTrnsc/.dotfiles/blob/main/vim/.vimrc) and in [this folder](https://github.com/RmTrnsc/.dotfiles/blob/main/vim/.vim) at the root
+
 - Launch this command
   ```
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
