@@ -70,7 +70,7 @@ launch_tmux() {
 	tmux select-window		-t dev:mysql
 
 	tmux select-pane		-t 3
-	tmux send-keys			'pv /usr/bin/backup_bdd.sh' Enter
+	tmux send-keys			'/usr/bin/backup_bdd.sh' Enter
 
 	sleep "20"
 
