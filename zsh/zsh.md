@@ -26,3 +26,23 @@ The list of plugins is [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
 ### Ressources
 - [Zsh installation](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+
+### ❗Possible language problem
+- To check the current language, type
+  ```
+  locale
+  ```
+- If this gives something else `LANG=fr_FR.UTF-8`, then you need to do this.
+  ```
+  sudo locale-gen fr_FR && sudo locale-gen fr_FR.UTF-8
+  ```
+- Followed by
+  ```
+  sudo dpkg-reconfigure locales
+  ```
+- and end with
+  ```
+  sudo update-locale LANG="fr_FR.UTF-8" LANGUAGE="fr_FR" && export LANG=fr_FR.UTF-8
+  ```
+- We retype `locale` to check the change
+  
